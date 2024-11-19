@@ -36,7 +36,6 @@ def translate_file(input_path:str, language:str):
             elif language.lower() == 'es':
                 language_deepl = deepl.Language.SPANISH
 
-            print(f"language: {language_deepl}")
             deepl_translation = deepl_translator.translate_text(original_text, target_lang=language_deepl).text
             
             # Write to output file

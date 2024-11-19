@@ -1,6 +1,6 @@
-# Usage
+# Installation
 To use this script:
-1. Install Python 3.9
+1. Install Python >=3.9
 2. Install the required libraries
 ```
 pip install googletrans==3.1.0a0 deepl python-dotenv
@@ -9,7 +9,21 @@ pip install googletrans==3.1.0a0 deepl python-dotenv
 ```
 DEEPL_API_KEY=your_api_key_here
 ```
-Where your_api_key is your DeepL API Key. You can get yours at ...
+Where your_api_key is your DeepL API Key.
+
+# Usage
+```
+usage: main.py [-h] file_path {en,es}
+```
+`file_path (required)`: path to the input text file, which should be formatted to have one sentence per line, and no empty/whitespaced lines
+
+`language (required) {en, es}`: destination language key to translate the input file sentences to. `en` will translate them to english, `es` to spanish 
+
+To use the script, just open a terminal on the folder the script is located and create a file named `input.txt` (or any name), fill it with the desired sentences, and on the terminal type:
+```
+python main.py input.txt es
+```
+You should get a message when the translation is done with the translated outputs file name
 
 # Appendix: Getting your DeepL API Key 
 1. Go to the [DeepL landing page](https://www.deepl.com/es/pro-api)
