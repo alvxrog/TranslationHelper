@@ -5,11 +5,19 @@ To use this script:
 ```
 pip install googletrans==3.1.0a0 deepl python-dotenv
 ```
-3. Create a file named ".env", in the same directory as the script, and add a line with:
+3. Install the PyTorch GPU compatible releases
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+If using Anaconda
+```
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+```
+4. Create a file named ".env", in the same directory as the script, and add a line with:
 ```
 DEEPL_API_KEY=your_api_key_here
 ```
-Where your_api_key is your DeepL API Key.
+Where your_api_key is your DeepL API Key. We have an appendix explaining how to get yours if you dont have one yet.
 
 # Usage
 ```
